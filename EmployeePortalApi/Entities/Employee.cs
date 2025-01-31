@@ -7,7 +7,7 @@
 
         public int Salary { get; set; }
 
-        public bool IdProfile { get; set; }
+        public int IdProfile { get; set; }
 
         public virtual  Profile? ProfilesReference { get; set; }
     }

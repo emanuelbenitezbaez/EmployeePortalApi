@@ -1,4 +1,7 @@
 
+using EmployeePortalApi.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace EmployeePortalApi
 {
     public class Program
@@ -8,6 +11,11 @@ namespace EmployeePortalApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeePortalDB"));
+            });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
