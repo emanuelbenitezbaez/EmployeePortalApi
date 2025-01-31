@@ -7,8 +7,8 @@
 
         public int Salary { get; set; }
 
-        public bool IdPerfil { get; set; }
+        public bool IdProfile { get; set; }
 
-        public virtual required Perfil PerfilReference { get; set; }
+        public virtual  Profile? ProfilesReference { get; set; }
     }
 }
